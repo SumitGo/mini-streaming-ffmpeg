@@ -5,9 +5,10 @@ Implementing a mini Video on demand streaming service with the help of ffmpeg, H
 1. Open terminal and run this command, in the directory where the `input.mp4` file is stored
 `ffmpeg -f mpegts -i input.mp4 -c:v libx264 -preset veryfast -f hls -hls_time 2 -hls_flags delete_segments stream.m3u8`
 
-2. Create an `index.html` file like given below.
+2. Create an `index.html` file like given below. Make sure `hls.js` is installed. If not installed, then run this command to install it `npm install hls.js`.
+
 ```index.html
-// Index.html
+/* Index.html */
 <!DOCTYPE html>
 <html lang="en">
 
